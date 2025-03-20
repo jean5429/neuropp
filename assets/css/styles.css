@@ -1,0 +1,35 @@
+:root {
+    --primary-color: #2A5C82;
+    --secondary-color: #5DA9E9;
+}
+
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.navbar {
+    background-color: var(--primary-color) !important;
+}
+
+.card-custom {
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+}
+
+.chart-container {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,45 @@
+File Structure:
+
+neuropp/
+│
+├── assets/
+│   ├── css/
+│   │   ├── styles.css
+│   │   └── (outros arquivos de estilo quando necessário)
+│   ├── js/
+│   │   ├── app.js
+│   │   └── (plugins específicos)
+│   └── img/
+│       └── (imagens e ícones)
+│
+├── config/
+│   ├── config.php
+│   └── .htaccess (para URL amigável)
+│
+├── controllers/
+│   ├── PacientesController.php
+│   ├── AtividadesController.php
+│   └── RelatoriosController.php
+│
+├── models/
+│   ├── Paciente.php
+│   ├── Atividade.php
+│   └── Database.php
+│
+├── views/
+│   ├── dashboard.php
+│   ├── pacientes.php
+│   ├── atividades.php
+│   ├── relatorios.php
+│   ├── perfil.php
+│   └── 404.php
+│
+├── includes/
+│   ├── header.php
+│   └── footer.php
+│
+├── vendor/ (dependências externas)
+│
+└── index.php
+
+
