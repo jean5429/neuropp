@@ -27,6 +27,7 @@
         <!-- Atividades do Sistema -->
         <div class="tab-pane fade show active" id="sistema">
             <div class="row row-cols-1 row-cols-md-3 g-4">
+                <?php if(isset($sistemaAtividades)) { ?>
                 <?php foreach($sistemaAtividades as $atividade): ?>
                 <div class="col">
                     <div class="card h-100 activity-card">
@@ -54,12 +55,13 @@
                     </div>
                 </div>
                 <?php endforeach; ?>
+                <?php } ?>
             </div>
         </div>
 
         <!-- Atividades Personalizadas -->
         <div class="tab-pane fade" id="personalizadas">
-            <?php if(count($atividades) > 0): ?>
+            <?php if(isset($atividades) && count($atividades) > 0): ?>
                 <div class="list-group">
                     <?php foreach($atividades as $atividade): ?>
                     <div class="list-group-item">

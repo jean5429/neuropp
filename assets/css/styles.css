@@ -188,3 +188,22 @@ main {
 #selecionarPaciente {
     height: 300px;
 }
+
+/* Formulário Paciente */
+.paciente-form label {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.paciente-form textarea {
+    min-height: 100px;
+}
+
+/* Detalhes do Paciente */
+.paciente-detail dt {
+    color: var(--primary-color);
+}
+
+#progressoChart {
+    max-height: 300px;
+}

@@ -1,6 +1,20 @@
 <?php
 
 require 'config/config.php';
+
+// Roteamento
+$page = $_GET['page'] ?? 'dashboard';
+$action = $_GET['action'] ?? 'index';
+$id = $_GET['id'] ?? null;
+
+// Mapeamento de controllers
+$controllers = [
+    'pacientes' => 'PacientesController',
+    'atividades' => 'AtividadesController',
+    'relatorios' => 'RelatoriosController',
+    'perfil' => 'PerfilController'
+];
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -18,10 +32,23 @@ require 'config/config.php';
     
     <main class="container mt-4">
         <?php
+
         $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
         $allowed_pages = ['dashboard', 'pacientes', 'atividades', 'relatorios', 'perfil'];
         
         if(in_array($page, $allowed_pages)) {
+            if (array_key_exists($page, $controllers)) {
+                $controllerClass = $controllers[$page];
+                require_once "controllers/$controllerClass.php";
+                $controller = new $controllerClass();
+                
+                // Chama a ação correspondente
+                if (method_exists($controller, $action)) {
+                    $controller->$action($id);
+                } else {
+                    include 'views/404.php';
+                }
+            }
             include "views/{$page}.php";
         } else {
             include 'views/404.php';
