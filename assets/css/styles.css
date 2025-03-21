@@ -33,3 +33,158 @@ main {
     padding: 20px;
     margin-bottom: 20px;
 }
+
+/* Footer */
+.footer-custom {
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: auto;
+}
+
+.footer-custom a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-custom a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-custom .social-links i {
+    font-size: 1.2rem;
+    transition: opacity 0.3s;
+}
+
+.footer-custom .social-links a:hover i {
+    opacity: 0.8;
+}
+
+/* Dashboard */
+.stats-badge {
+    background: var(--secondary-color);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.stats-badge i {
+    font-size: 1.5rem;
+    margin-right: 0.8rem;
+}
+
+.stats-badge .count {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* Pacientes */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(93, 169, 233, 0.05);
+}
+
+.delete-paciente {
+    transition: all 0.3s;
+}
+
+.delete-paciente:hover {
+    transform: scale(1.1);
+}
+
+/* Atividades */
+.activity-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0,0,0,0.125);
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+.nav-tabs .nav-link.active {
+    background-color: var(--primary-color);
+    color: white !important;
+    border-color: var(--primary-color);
+}
+
+/* Relatórios */
+.badge.bg-progresso { background-color: #2A5C82; }
+.badge.bg-avaliacao { background-color: #5DA9E9; }
+.badge.bg-personalizado { background-color: #4CAF50; }
+
+.table-hover tbody tr td:first-child {
+    border-left: 3px solid transparent;
+}
+
+.table-hover tbody tr:hover td:first-child {
+    border-left-color: var(--primary-color);
+}
+
+/* Página de Perfil */
+.perfil-container .form-label {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.perfil-container input:disabled {
+    background-color: #f8f9fa;
+}
+
+/* Página 404 */
+.error-container {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.error-content {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.error-code {
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+    line-height: 1;
+}
+
+.error-container .btn {
+    min-width: 200px;
+}
+
+/* Formulário de Atividade */
+.atividade-form .parametro-item {
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.remover-parametro {
+    transition: transform 0.2s;
+}
+
+.remover-parametro:hover {
+    transform: rotate(90deg);
+}
+
+/* Aplicar Atividade */
+#selecionarPaciente {
+    height: 300px;
+}

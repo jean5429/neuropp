@@ -42,4 +42,37 @@ neuropp/
 │
 └── index.php
 
+Próximos Passos:
 
+Perfil.php:
+Implementar upload de foto de perfil
+Adicionar validação de força de senha
+Criar sistema de notificações por e-mail
+Adicionar verificação em duas etapas
+Implementar histórico de alterações no perfil
+Criar página de ajuda/acessibilidade
+
+Atividades/Relatórios:
+Implementar AJAX para carregar detalhes das atividades
+Adicionar paginação nas tabelas
+Criar sistema de preview de relatórios
+Implementar gráficos interativos nos relatórios
+Adicionar validação de formulários
+Desenvolver sistema de templates para relatórios
+
+Pacientes/Dashboard:
+Implementar sistema de paginação
+Adicionar filtros avançados
+Criar modais de confirmação para exclusão
+Adicionar ordenação na tabela
+Implementar pesquisa AJAX
+Adicionar exportação de dados
+Criar sistema de tags/categorias
+
+Atividades Views:
+Implementar sistema de drag-and-drop para parâmetros
+Adicionar preview da atividade
+Criar histórico de aplicações
+Implementar timer para atividades
+Adicionar upload de arquivos para atividades
+Criar sistema de comentários nas atividades
