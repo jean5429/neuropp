@@ -9,6 +9,7 @@ $id = $_GET['id'] ?? null;
 
 // Mapeamento de controllers
 $controllers = [
+    'auth' => 'AuthController',
     'pacientes' => 'PacientesController',
     'atividades' => 'AtividadesController',
     'relatorios' => 'RelatoriosController',
@@ -34,7 +35,7 @@ $controllers = [
         <?php
 
         $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
-        $allowed_pages = ['dashboard', 'pacientes', 'atividades', 'relatorios', 'perfil'];
+        $allowed_pages = ['dashboard', 'pacientes', 'atividades', 'relatorios', 'perfil', 'auth'];
         
         if(in_array($page, $allowed_pages)) {
             if (array_key_exists($page, $controllers)) {

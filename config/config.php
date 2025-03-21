@@ -1,24 +1,23 @@
 <?php
-session_name('NEUROPP_SESS');
+session_name('MUSIC_SESS');
 session_start();
 
-$host = 'localhost';
-$db   = 'neuropp_db';
-$user = 'neuropp_user';
-$pass = 'Jinf&jhuif&3469@';
-$charset = 'utf8mb4';
+// Configurações básicas
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'neuropp_db');
+define('DB_USER', 'neuropp_user');
+define('DB_PASS', 'Jinf&jhuif&3469@');
 
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-$options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false,
-];
-
+// Conexão com o banco de dados
 try {
-    $pdo = new PDO($dsn, $user, $pass, $options);
-} catch (\PDOException $e) {
-    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+    $pdo = new PDO(
+        "mysql:host=".DB_HOST.";dbname=".DB_NAME.";charset=utf8",
+        DB_USER, 
+        DB_PASS
+    );
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    die("Erro de conexão: " . $e->getMessage());
 }
 
 // Funções úteis

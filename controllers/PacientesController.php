@@ -11,7 +11,7 @@ class PacientesController {
 
     private function checkAuth() {
         if(!isset($_SESSION['usuario_id'])) {
-            header('Location: /login');
+            header('Location: /neuropp/?page=auth&action=login');
             exit();
         }
     }
